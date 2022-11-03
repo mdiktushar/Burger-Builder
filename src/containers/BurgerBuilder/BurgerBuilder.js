@@ -5,11 +5,18 @@ import Auxlary from '../../hoc/Auxlary'
 
 export class BurgerBuilder extends Component {
 //   static propTypes = {}
-
+  state = {
+    ingredients: {
+      salad: 1,
+      beef: 1,
+      cheese: 2,
+      meat:2
+    }
+  }
   render() {
     return (
     <Auxlary>
-        <Burger />
+        <Burger ingredients={this.state.ingredients} />
         <div>Build Component</div>
     </Auxlary>
 )
