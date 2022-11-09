@@ -1,6 +1,7 @@
 // import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Burger from '../../components/Burger/Burger'
+import BuildControls from '../../components/Burger/BurgerIngredient/BuildControls/BuildControls'
 import Auxlary from '../../hoc/Auxlary'
 
 export class BurgerBuilder extends Component {
@@ -17,7 +18,7 @@ export class BurgerBuilder extends Component {
     return (
     <Auxlary>
         <Burger ingredients={this.state.ingredients} />
-        <div>Build Component</div>
+        <BuildControls />
     </Auxlary>
 )
   }
