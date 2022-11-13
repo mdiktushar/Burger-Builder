@@ -1,8 +1,10 @@
 // import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Burger from '../../components/Burger/Burger'
-import BuildControls from '../../components/Burger/BurgerIngredient/BuildControls/BuildControls'
+import BuildControls from '../../components/Burger/BuildControls/BuildControls'
+import Modal from '../../components/UI/Modal/Modal'
 import Auxlary from '../../hoc/Auxlary'
+import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary'
 
 
 const INGREDIENT_PRICES ={
@@ -81,7 +83,10 @@ export class BurgerBuilder extends Component {
       disabledInfo[key] = disabledInfo[key] <= 0
     }
     return (
-    <Auxlary>
+      <Auxlary>
+        <Modal>
+          <OrderSummary ingredients = {this.state.ingredients} />
+        </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls 
           ingredientAdded = {this.addIngredientHandler}
@@ -90,8 +95,8 @@ export class BurgerBuilder extends Component {
           purchasable = {this.state.purchasable}
           price = {this.state.totalPrice}
         />
-    </Auxlary>
-)
+      </Auxlary>
+    )
   }
 }
 
