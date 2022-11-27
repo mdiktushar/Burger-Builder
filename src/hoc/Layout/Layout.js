@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import Auxlary from '../../hoc/Auxlary'
-import SideDrawer from '../Navigation/SideDrawer/SideDrawer'
-import Toolbar from '../Navigation/Toolbar/Toolbar'
+import Auxlary from '../Auxlary/Auxlary'
+import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer'
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar'
 // import PropTypes from 'prop-types'
 // Css class
 import classes from './Layout.css'
@@ -10,7 +10,7 @@ import classes from './Layout.css'
 class Layout extends Component{
 
     state = {
-        shwoSideDraer: true
+        shwoSideDraer: false
     }
 
     sideBrawerClosedHandler = () => {

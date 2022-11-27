@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Burger from '../../components/Burger/Burger'
 import BuildControls from '../../components/Burger/BuildControls/BuildControls'
 import Modal from '../../components/UI/Modal/Modal'
-import Auxlary from '../../hoc/Auxlary'
+import Auxlary from '../../hoc/Auxlary/Auxlary'
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary'
 
 
